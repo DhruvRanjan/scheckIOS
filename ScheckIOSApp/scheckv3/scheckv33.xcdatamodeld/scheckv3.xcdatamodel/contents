@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Days" representedClassName="scheckv3.Days" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Departments" representedClassName="scheckv3.Departments" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Email" representedClassName="scheckv3.Email" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employees" representedClassName="scheckv3.Employees" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shifts" inverseName="relationship" inverseEntity="Shifts" syncable="YES"/>
+    </entity>
+    <entity name="Shifts" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shift" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employees" inverseName="relationship" inverseEntity="Employees" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Days" positionX="-45" positionY="63" width="128" height="103"/>
+        <element name="Email" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="Employees" positionX="-45" positionY="18" width="128" height="103"/>
+        <element name="Shifts" positionX="-36" positionY="45" width="128" height="103"/>
+        <element name="Departments" positionX="-45" positionY="63" width="128" height="58"/>
+    </elements>
+</model>

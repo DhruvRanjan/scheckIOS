@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CompanySettings" representedClassName="scheckv3.CompanySettings" syncable="YES">
+        <attribute name="companyEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="companyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Days" representedClassName="scheckv3.Days" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Departments" representedClassName="scheckv3.Departments" syncable="YES">
+        <attribute name="companyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Employees" representedClassName="scheckv3.Employees" syncable="YES">
+        <attribute name="department" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shifts" inverseName="relationship" inverseEntity="Shifts" syncable="YES"/>
+    </entity>
+    <entity name="Requests" representedClassName="scheckv3.Requests" syncable="YES">
+        <attribute name="availability" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="confirmed" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="request" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shiftName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ShiftAvailability" representedClassName="scheckv3.ShiftAvailability" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shift" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Shifts" representedClassName="scheckv3.Shifts" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="managerEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shift" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employees" inverseName="relationship" inverseEntity="Employees" syncable="YES"/>
+    </entity>
+    <elements>
+<<<<<<< HEAD
+        <element name="CompanySettings" positionX="-36" positionY="99" width="128" height="135"/>
+        <element name="Days" positionX="-45" positionY="63" width="128" height="120"/>
+        <element name="Departments" positionX="-45" positionY="63" width="128" height="30"/>
+        <element name="Employees" positionX="-45" positionY="18" width="128" height="165"/>
+        <element name="Requests" positionX="-45" positionY="63" width="128" height="195"/>
+        <element name="ShiftAvailability" positionX="-45" positionY="72" width="128" height="105"/>
+        <element name="Shifts" positionX="-36" positionY="45" width="128" height="120"/>
+=======
+        <element name="CompanySettings" positionX="-36" positionY="99" width="128" height="120"/>
+        <element name="Days" positionX="-45" positionY="63" width="128" height="103"/>
+        <element name="Departments" positionX="-45" positionY="63" width="128" height="58"/>
+        <element name="Employees" positionX="-45" positionY="18" width="128" height="150"/>
+        <element name="Employees" positionX="-45" positionY="18" width="128" height="135"/>
+        <element name="Requests" positionX="-45" positionY="63" width="128" height="180"/>
+        <element name="ShiftAvailability" positionX="-45" positionY="72" width="128" height="88"/>
+        <element name="Shifts" positionX="-36" positionY="45" width="128" height="103"/>
+>>>>>>> d7a0f8dddfb5ec8f0d17b13eded7469634eb1085
+    </elements>
+</model>
